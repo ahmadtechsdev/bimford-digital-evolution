@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import bimfordLogo from "@/assets/bimford-logo.png";
+import bimfordLogo from "@/assets/bimford-logo-colored.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
