@@ -59,25 +59,25 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@bimford.com",
+      details: ["enquiries@bimford.com", "bimford@gmail.com"],
       description: "Get in touch for project inquiries"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri 9AM-6PM EST"
+      details: ["US: +17866363978", "UK: +17866363978"],
+      description: "Mon-Fri 9AM-6PM local time"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Global Offices",
-      description: "Locations worldwide to serve you better"
+      details: ["Florida, United States", "Fulham High Street, London, UK"],
+      description: "Two strategic locations to serve you better"
     },
     {
       icon: Clock,
       title: "Response Time",
-      details: "24 Hours",
+      details: ["24 Hours"],
       description: "We respond to all inquiries quickly"
     }
   ];
@@ -245,7 +245,11 @@ const Contact = () => {
                             </div>
                             <div>
                               <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
-                              <p className="text-primary font-medium mb-1">{info.details}</p>
+                              <div className="space-y-1 mb-1">
+                                {info.details.map((detail, idx) => (
+                                  <p key={idx} className="text-primary font-medium">{detail}</p>
+                                ))}
+                              </div>
                               <p className="text-sm text-muted-foreground">{info.description}</p>
                             </div>
                           </div>

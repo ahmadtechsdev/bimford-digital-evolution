@@ -10,6 +10,7 @@ import {
   Brain, 
   BookOpen, 
   Settings, 
+  PenTool,
   ArrowRight,
   CheckCircle,
   Zap,
@@ -17,6 +18,10 @@ import {
   Shield
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import bimModelingImage from "@/assets/bim-modeling.jpg";
+import digitalTwinImage from "@/assets/digital-twin.jpg";
+import consultingImage from "@/assets/consulting.jpg";
+import designManagementImage from "@/assets/design-management.jpg";
 
 const Services = () => {
   const [activeService, setActiveService] = useState("modeling");
@@ -27,6 +32,7 @@ const Services = () => {
       title: "BIM Modeling & Dimensions",
       subtitle: "From 3D to 7D BIM Solutions",
       description: "Our modeling goes beyond simple 3D geometry. We create information-rich, intelligent models that evolve with your project — enabling collaboration, cost efficiency, and long-term asset management.",
+      image: bimModelingImage,
       dimensions: [
         { level: "3D BIM", description: "High-precision architectural, structural, and MEP models" },
         { level: "4D BIM", description: "Time-linked models that simulate construction sequencing" },
@@ -46,6 +52,7 @@ const Services = () => {
       title: "BIM Coordination & Clash Detection",
       subtitle: "Seamless Integration Across Disciplines",
       description: "Poor coordination is the #1 cause of project delays and cost overruns. BIMFord ensures seamless integration across architectural, structural, and MEP disciplines — detecting and resolving clashes virtually before construction begins.",
+      image: bimModelingImage,
       features: [
         "Federated model creation in a Common Data Environment (CDE)",
         "Automated clash detection using Navisworks, Solibri, and BIM360",
@@ -58,11 +65,32 @@ const Services = () => {
         "Enable smooth collaboration between consultants, contractors, and subcontractors"
       ]
     },
+    design: {
+      icon: PenTool,
+      title: "Design Management",
+      subtitle: "Comprehensive Design Coordination",
+      description: "Streamline your design process with comprehensive design management services that ensure quality, coordination, and timely delivery across all project phases.",
+      image: designManagementImage,
+      services: [
+        "Design coordination and quality control",
+        "Multi-disciplinary design review and approval",
+        "Design standards and guidelines development",
+        "Progress monitoring and milestone tracking",
+        "Design documentation and version control"
+      ],
+      benefits: [
+        "Improved design quality and consistency",
+        "Reduced design iterations and revisions",
+        "Better coordination between design teams",
+        "Faster project approval processes"
+      ]
+    },
     digital: {
       icon: Brain,
       title: "Digital Twin & Emerging Technologies",
       subtitle: "The Future of Construction Technology",
       description: "We take BIM into the future by integrating Digital Twins, AI, and immersive technologies — making your projects smarter, more predictive, and easier to operate.",
+      image: digitalTwinImage,
       innovations: [
         "Digital Twin Development: Real-time monitoring with IoT sensors",
         "AI & Machine Learning: Predictive maintenance, risk detection, and cost forecasting",
@@ -82,6 +110,7 @@ const Services = () => {
       title: "BIM Consulting & Implementation",
       subtitle: "Strategic BIM Adoption",
       description: "Adopting BIM isn't just about software — it's about people, processes, and culture. BIMFord helps organizations transition smoothly to a BIM-enabled way of working.",
+      image: consultingImage,
       services: [
         "BIM adoption strategy and roadmap",
         "Maturity assessment and process audit",
@@ -101,6 +130,7 @@ const Services = () => {
       title: "Lifecycle & Operations Support",
       subtitle: "Long-term Asset Value",
       description: "Your BIM model is more than a design tool — it's a long-term asset. We help owners and operators leverage BIM for efficient operations, maintenance, and facility management.",
+      image: consultingImage,
       services: [
         "As-built model creation and handover",
         "7D integration with Facility Management (FM) systems",
@@ -143,9 +173,10 @@ const Services = () => {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <Tabs value={activeService} onValueChange={setActiveService} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
+              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 mb-8">
                 <TabsTrigger value="modeling">Modeling</TabsTrigger>
                 <TabsTrigger value="coordination">Coordination</TabsTrigger>
+                <TabsTrigger value="design">Design Mgmt</TabsTrigger>
                 <TabsTrigger value="digital">Digital Twin</TabsTrigger>
                 <TabsTrigger value="consulting">Consulting</TabsTrigger>
                 <TabsTrigger value="operations">Operations</TabsTrigger>
@@ -153,9 +184,20 @@ const Services = () => {
 
               {Object.entries(services).map(([key, service]) => (
                 <TabsContent key={key} value={key} className="mt-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    {/* Service Image */}
+                    <div className="lg:col-span-1">
+                      <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    
                     {/* Service Details */}
-                    <div>
+                    <div className="lg:col-span-1">
                       <div className="flex items-center space-x-4 mb-6">
                         <div className="bg-primary/10 p-3 rounded-lg">
                           <service.icon className="h-8 w-8 text-primary" />
@@ -231,7 +273,7 @@ const Services = () => {
                     </div>
 
                     {/* Benefits Card */}
-                    <div>
+                    <div className="lg:col-span-1">
                       <Card className="mb-6">
                         <CardHeader>
                           <CardTitle className="flex items-center space-x-2">
