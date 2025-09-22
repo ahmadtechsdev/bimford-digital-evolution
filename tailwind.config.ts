@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        'eras': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'sans': ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'eras': ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'satoshi': ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
