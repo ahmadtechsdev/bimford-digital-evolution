@@ -15,7 +15,8 @@ import {
   CheckCircle,
   Zap,
   TrendingUp,
-  Shield
+  Shield,
+  Palette
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import bimModelingImage from "@/assets/bim-modeling.jpg";

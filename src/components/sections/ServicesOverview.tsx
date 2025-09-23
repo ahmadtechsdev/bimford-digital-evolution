@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Layers, GitBranch, Brain, BookOpen, Settings } from "lucide-react";
+import { ArrowRight, Layers, GitBranch, Brain, BookOpen, Settings, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ServicesOverview = () => {
@@ -15,6 +15,12 @@ const ServicesOverview = () => {
       title: "BIM Coordination & Clash Detection",
       description: "Seamless integration across all disciplines. Detect and resolve clashes virtually before construction begins.",
       benefits: ["Prevent budget overruns", "Reduce RFIs", "Smooth collaboration"]
+    },
+    {
+      icon: Palette,
+      title: "Design Management",
+      description: "Comprehensive design coordination ensuring quality, consistency, and timely delivery across all project phases.",
+      benefits: ["Improved design quality", "Reduced iterations", "Better coordination"]
     },
     {
       icon: Brain,

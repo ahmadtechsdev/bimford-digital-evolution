@@ -48,6 +48,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="text-secondary-foreground/80">BIM Modeling</li>
               <li className="text-secondary-foreground/80">Coordination & Clash Detection</li>
+              <li className="text-secondary-foreground/80">Design Management</li>
               <li className="text-secondary-foreground/80">Digital Twin</li>
               <li className="text-secondary-foreground/80">BIM Consulting</li>
               <li className="text-secondary-foreground/80">Operations Support</li>
@@ -58,17 +59,26 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-secondary-foreground mb-4">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80 text-sm">info@bimford.com</span>
+              <div className="flex items-start space-x-2">
+                <Mail className="h-4 w-4 text-primary mt-0.5" />
+                <div className="text-secondary-foreground/80 text-sm">
+                  <div>enquiries@bimford.com</div>
+                  <div>bimford@gmail.com</div>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80 text-sm">+1 (555) 123-4567</span>
+              <div className="flex items-start space-x-2">
+                <Phone className="h-4 w-4 text-primary mt-0.5" />
+                <div className="text-secondary-foreground/80 text-sm">
+                  <div>US: +17866363978</div>
+                  <div>UK: +17866363978</div>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80 text-sm">Global Offices</span>
+              <div className="flex items-start space-x-2">
+                <MapPin className="h-4 w-4 text-primary mt-0.5" />
+                <div className="text-secondary-foreground/80 text-sm">
+                  <div>Florida, United States</div>
+                  <div>Fulham High Street, London, UK</div>
+                </div>
               </div>
             </div>
           </div>
