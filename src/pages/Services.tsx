@@ -174,14 +174,16 @@ const Services = () => {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <Tabs value={activeService} onValueChange={setActiveService} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 mb-8">
-                <TabsTrigger value="modeling">Modeling</TabsTrigger>
-                <TabsTrigger value="coordination">Coordination</TabsTrigger>
-                <TabsTrigger value="design">Design Mgmt</TabsTrigger>
-                <TabsTrigger value="digital">Digital Twin</TabsTrigger>
-                <TabsTrigger value="consulting">Consulting</TabsTrigger>
-                <TabsTrigger value="operations">Operations</TabsTrigger>
-              </TabsList>
+              <div className="w-full overflow-x-auto mb-8">
+                <TabsList className="inline-flex w-auto min-w-full lg:w-full lg:grid lg:grid-cols-6 gap-1 p-1">
+                  <TabsTrigger value="modeling" className="whitespace-nowrap">Modeling</TabsTrigger>
+                  <TabsTrigger value="coordination" className="whitespace-nowrap">Coordination</TabsTrigger>
+                  <TabsTrigger value="design" className="whitespace-nowrap">Design Mgmt</TabsTrigger>
+                  <TabsTrigger value="digital" className="whitespace-nowrap">Digital Twin</TabsTrigger>
+                  <TabsTrigger value="consulting" className="whitespace-nowrap">Consulting</TabsTrigger>
+                  <TabsTrigger value="operations" className="whitespace-nowrap">Operations</TabsTrigger>
+                </TabsList>
+              </div>
 
               {Object.entries(services).map(([key, service]) => (
                 <TabsContent key={key} value={key} className="mt-8">
