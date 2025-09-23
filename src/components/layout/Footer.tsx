@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import bimfordLogo from "@/assets/bimford-logo-white.svg";
 
 const Footer = () => {
@@ -85,11 +85,31 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-secondary-foreground/20">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <p className="text-secondary-foreground/60 text-sm">
               © 2024 BIMFord. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 sm:mt-0">
+            
+            {/* Social Media */}
+            <div className="flex items-center gap-4">
+              <span className="text-secondary-foreground/60 text-sm">Follow us:</span>
+              <div className="flex space-x-3">
+                <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors" aria-label="Facebook">
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors" aria-label="Twitter">
+                  <Twitter className="h-4 w-4" />
+                </a>
+                <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="h-4 w-4" />
+                </a>
+                <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors" aria-label="Instagram">
+                  <Instagram className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex space-x-6">
               <Link to="/privacy" className="text-secondary-foreground/60 hover:text-secondary-foreground text-sm transition-colors">
                 Privacy Policy
               </Link>

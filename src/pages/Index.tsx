@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import TopBanner from "@/components/layout/TopBanner";
 import Hero from "@/components/sections/Hero";
 import TrustIndicators from "@/components/sections/TrustIndicators";
 import HighlightsSection from "@/components/sections/HighlightsSection";
@@ -9,6 +10,7 @@ import ServicesOverview from "@/components/sections/ServicesOverview";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <TopBanner />
       <Header />
       <main>
         <Hero />

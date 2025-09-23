@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import TopBanner from "@/components/layout/TopBanner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -106,6 +107,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <TopBanner />
       <Header />
       
       <main className="pt-16">
