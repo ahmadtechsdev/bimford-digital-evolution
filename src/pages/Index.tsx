@@ -13,8 +13,8 @@ const Index = () => {
       <TopBanner />
       <Header />
       <main className="pt-28">
+        <Hero />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Hero />
           <TrustIndicators />
           <HighlightsSection />
           <About />
