@@ -66,7 +66,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["US: +17866363978", "UK: +17866363978"],
+      details: ["US: +17866363978", "UK: +44(0)7932448267"],
       description: "Mon-Fri 9AM-6PM local time"
     },
     {
@@ -236,7 +236,7 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
+                  <h2 className="text-2xl font-bold mb-6" style={{ color: 'black' }}>Get in Touch</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {contactInfo.map((info, index) => (
                       <Card key={index}>

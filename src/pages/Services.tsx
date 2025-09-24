@@ -189,20 +189,20 @@ const Services = () => {
 
               {Object.entries(services).map(([key, service]) => (
                 <TabsContent key={key} value={key} className="mt-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                    {/* Service Image */}
-                    <div className="lg:col-span-1">
-                      <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                        <img 
-                          src={service.image} 
-                          alt={service.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                  {/* Full-width Service Image */}
+                  <div className="w-full mb-8">
+                    <div className="aspect-[21/9] overflow-hidden rounded-lg">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    
+                  </div>
+                  
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Service Details */}
-                    <div className="lg:col-span-1">
+                    <div>
                       <div className="flex items-center space-x-4 mb-6">
                         <div className="bg-primary/10 p-3 rounded-lg">
                           <service.icon className="h-8 w-8 text-primary" />
@@ -278,7 +278,7 @@ const Services = () => {
                     </div>
 
                     {/* Benefits Card */}
-                    <div className="lg:col-span-1">
+                    <div>
                       <Card className="mb-6">
                         <CardHeader>
                           <CardTitle className="flex items-center space-x-2">

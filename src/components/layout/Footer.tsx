@@ -70,7 +70,7 @@ const Footer = () => {
                 <Phone className="h-4 w-4 text-primary mt-0.5" />
                 <div className="text-muted-foreground text-sm">
                   <div>US: +17866363978</div>
-                  <div>UK: +17866363978</div>
+                  <div>UK: +44(0)7932448267</div>
                 </div>
               </div>
               <div className="flex items-start space-x-2">
