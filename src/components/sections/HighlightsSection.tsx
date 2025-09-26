@@ -26,31 +26,31 @@ const HighlightsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold text-foreground mb-6 gradient-text">
             Why Choose BIMFord?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Proven results that drive measurable value for your construction projects
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {highlights.map((highlight, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border hover:border-primary/20">
-              <CardContent className="p-6 text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <highlight.icon className="h-8 w-8 text-primary" />
+            <Card key={index} className="group p-10 text-center card-hover bg-background border-0 shadow-lg">
+              <div className="mb-8">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                  <highlight.icon className="h-10 w-10 text-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
                   {highlight.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   {highlight.description}
                 </p>
-              </CardContent>
+              </div>
             </Card>
           ))}
         </div>

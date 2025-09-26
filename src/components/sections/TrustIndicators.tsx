@@ -39,46 +39,33 @@ const TrustIndicators = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-32 bg-gradient-accent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Stats Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {indicators.map((indicator, index) => {
-            const Icon = indicator.icon;
-            return (
-              <Card key={index} className="text-center border-0 shadow-elegant bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <Icon className="h-8 w-8 text-primary mx-auto mb-4" />
-                  <div className="text-3xl lg:text-4xl font-bold text-foreground mb-2">
-                    {indicator.title}
-                  </div>
-                  <div className="text-sm font-semibold text-foreground mb-1">
-                    {indicator.description}
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    {indicator.subtitle}
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+        {/* Trust Indicators */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+          {indicators.map((indicator, index) => (
+            <Card key={index} className="group text-center p-10 card-hover bg-background/80 backdrop-blur-sm border-0 shadow-lg">
+              <div className="mb-6">
+                <indicator.icon className="h-14 w-14 mx-auto text-foreground mb-6 transition-transform group-hover:scale-110" />
+                <h3 className="text-5xl font-bold text-foreground mb-3 gradient-text">{indicator.title}</h3>
+                <p className="text-lg font-semibold text-foreground mb-2">{indicator.description}</p>
+                <p className="text-sm text-muted-foreground">{indicator.subtitle}</p>
+              </div>
+            </Card>
+          ))}
         </div>
 
-        {/* Trust Sectors */}
+        {/* Industries Served */}
         <div className="text-center">
-          <h3 className="text-lg font-semibold text-foreground mb-6">
-            Trusted by leading firms across industries
-          </h3>
-          <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-8">
+          <h3 className="text-3xl font-bold mb-12 text-foreground">Industries We Serve</h3>
+          <div className="flex flex-wrap justify-center gap-4">
             {sectors.map((sector, index) => (
-              <div key={index} className="flex items-center">
-                <span className="text-muted-foreground text-sm font-medium px-3 py-1 rounded-full bg-background/50">
-                  {sector}
-                </span>
-                {index < sectors.length - 1 && (
-                  <span className="text-muted-foreground/50 mx-2 hidden lg:inline">•</span>
-                )}
-              </div>
+              <span 
+                key={index}
+                className="bg-background/90 backdrop-blur-sm px-8 py-4 rounded-full text-sm font-medium text-foreground border border-border/50 hover:shadow-lg hover:bg-background transition-all duration-200 hover:scale-105"
+              >
+                {sector}
+              </span>
             ))}
           </div>
         </div>

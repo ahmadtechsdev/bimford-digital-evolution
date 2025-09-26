@@ -9,43 +9,42 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 17% 23%;
-
+    --foreground: 220 8.9% 46.1%;
     --card: 0 0% 100%;
-    --card-foreground: 210 17% 23%;
-
+    --card-foreground: 220 8.9% 46.1%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 17% 23%;
-
-    --primary: 207 83% 57%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 17% 23%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 210 6% 40%;
-
-    --accent: 207 100% 97%;
-    --accent-foreground: 207 83% 57%;
-
+    --popover-foreground: 220 8.9% 46.1%;
+    --primary: 220 14.3% 95.9%;
+    --primary-foreground: 220 9% 46%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220 9% 46%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220 9% 46%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 0 0% 93%;
-    --input: 0 0% 93%;
-    --ring: 207 83% 57%;
-
-    /* Custom BIMFord Design Tokens */
-    --primary-light: 207 83% 67%;
-    --primary-glow: 207 100% 85%;
-    --gradient-primary: linear-gradient(135deg, hsl(207 83% 57%), hsl(207 83% 67%));
-    --gradient-hero: linear-gradient(135deg, hsl(207 83% 57%) 0%, hsl(210 17% 23%) 100%);
-    --shadow-elegant: 0 10px 30px -10px hsl(207 83% 57% / 0.3);
-    --shadow-glow: 0 0 40px hsl(207 100% 85% / 0.4);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 0.5rem;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 216 12% 84%;
+    
+    /* Modern gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 9% 46%) 0%, hsl(220 9% 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(220 14.3% 95.9%) 0%, hsl(220 13% 91%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 14.3% 95.9%) 100%);
+    
+    /* Modern shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 0 1px hsl(220 13% 91%);
+    
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    --radius: 12px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -65,37 +64,35 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 210 17% 23%;
-    --foreground: 0 0% 100%;
-
-    --card: 210 17% 23%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 210 17% 23%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 207 83% 57%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 11% 35%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 11% 35%;
-    --muted-foreground: 210 6% 70%;
-
-    --accent: 210 11% 35%;
-    --accent-foreground: 207 83% 57%;
-
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 210 11% 35%;
-    --input: 210 11% 35%;
-    --ring: 207 83% 57%;
-
-    /* Dark mode adjustments */
-    --gradient-primary: linear-gradient(135deg, hsl(207 83% 57%), hsl(207 83% 47%));
-    --gradient-hero: linear-gradient(135deg, hsl(207 83% 57%) 0%, hsl(210 17% 13%) 100%);
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12% 84%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(217.9 10.6% 64.9%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(215 27.9% 16.9%) 0%, hsl(224 71.4% 4.1%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(224 71.4% 4.1%) 0%, hsl(215 27.9% 16.9%) 100%);
+    
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 0 1px hsl(215 27.9% 16.9%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -111,8 +108,57 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground font-satoshi;
+    @apply bg-background text-foreground font-satoshi antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+  
+  /* Modern typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl lg:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl lg:text-4xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl lg:text-3xl leading-snug;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Modern button animations */
+  .btn-hover {
+    @apply transition-all duration-200 ease-out hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+  
+  /* Modern card hover effects */
+  .card-hover {
+    @apply transition-all duration-200 ease-out hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  /* Modern glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  /* Modern gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent;
+  }
+  
+  /* Modern focus styles */
+  .focus-modern {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
   }
 }
