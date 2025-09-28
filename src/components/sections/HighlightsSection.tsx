@@ -35,29 +35,29 @@ const HighlightsSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-24">
-          <h2 className="text-6xl md:text-7xl font-black text-foreground mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">
             Why Choose <span className="gradient-text">BIMFord?</span>
           </h2>
-          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-normal">
             Proven results that drive measurable value for your construction projects
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {highlights.map((highlight, index) => (
-            <Card key={index} className="group p-12 text-center border-0 shadow-xl bg-background/95 backdrop-blur-md hover:shadow-brand">
+            <Card key={index} className="group p-8 text-center border border-border/50 shadow-lg bg-card hover:shadow-brand">
               <div className="relative">
-                <div className="mb-10">
-                  <div className="relative mb-8">
-                    <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-xl group-hover:bg-primary/20 transition-all duration-300"></div>
-                    <div className="relative w-24 h-24 mx-auto bg-gradient-primary rounded-3xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-brand">
-                      <highlight.icon className="h-12 w-12 text-primary-foreground" />
+                <div className="mb-8">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-lg group-hover:bg-primary/20 transition-all duration-300"></div>
+                    <div className="relative w-20 h-20 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-elegant">
+                      <highlight.icon className="h-10 w-10 text-primary-foreground" />
                     </div>
                   </div>
-                  <h3 className="text-3xl font-black text-foreground mb-6 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                     {highlight.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
+                  <p className="text-muted-foreground leading-relaxed text-base group-hover:text-card-foreground transition-colors duration-300">
                     {highlight.description}
                   </p>
                 </div>

@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto text-center">
           {/* Main Heading */}
           <div className="mb-12 space-y-6">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl xl:text-[12rem] font-black leading-[0.85] tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tight">
               <span className="block text-foreground animate-fade-in">Building</span>
               <span className="block gradient-text animate-fade-in" style={{animationDelay: '0.2s'}}>Smarter</span>
               <span className="block text-foreground animate-fade-in" style={{animationDelay: '0.4s'}}>Managing</span>
@@ -33,9 +33,9 @@ const Hero = () => {
           </div>
           
           {/* Subtitle */}
-          <p className="text-2xl md:text-3xl lg:text-4xl mb-20 text-muted-foreground max-w-5xl mx-auto leading-relaxed font-light animate-fade-in" style={{animationDelay: '0.8s'}}>
+          <p className="text-xl md:text-2xl lg:text-3xl mb-20 text-muted-foreground max-w-5xl mx-auto leading-relaxed font-normal animate-fade-in" style={{animationDelay: '0.8s'}}>
             Digital transformation partners for the AECO industry, delivering{" "}
-            <span className="text-primary font-semibold">measurable results</span> through innovation.
+            <span className="text-primary font-medium">measurable results</span> through innovation.
           </p>
 
           {/* CTA Buttons */}

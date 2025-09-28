@@ -20,10 +20,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-background/90 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="transition-all duration-300 hover:scale-105 group">
-            <img src={bimfordLogo} alt="BIMFord" className="h-14 w-auto" />
+            <img src={bimfordLogo} alt="BIMFord" className="h-8 md:h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
