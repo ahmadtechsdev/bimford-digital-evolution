@@ -24,11 +24,8 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto text-center">
           {/* Main Heading */}
           <div className="mb-12 space-y-6">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.9] tracking-tight">
-              <span className="block text-foreground animate-fade-in">Building</span>
-              <span className="block gradient-text animate-fade-in" style={{animationDelay: '0.2s'}}>Smarter</span>
-              <span className="block text-foreground animate-fade-in" style={{animationDelay: '0.4s'}}>Managing</span>
-              <span className="block gradient-text animate-fade-in" style={{animationDelay: '0.6s'}}>Better</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight tracking-tight">
+              <span className="gradient-text animate-fade-in">Building Smarter Managing Better</span>
             </h1>
           </div>
           

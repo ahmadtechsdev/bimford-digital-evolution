@@ -114,11 +114,11 @@ const About = () => {
         {/* Hero Section */}
         <section className="bg-gradient-hero py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-white max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 About BIMFord
               </h1>
-              <p className="text-lg md:text-xl mb-8 text-white/90">
+              <p className="text-lg md:text-xl mb-8 text-white/95 leading-relaxed">
                 We are more than BIM consultants — we are digital transformation partners 
                 for the Architecture, Engineering, Construction, and Operations (AECO) industry.
               </p>

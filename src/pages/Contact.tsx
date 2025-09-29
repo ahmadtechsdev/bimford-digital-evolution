@@ -110,11 +110,11 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="bg-gradient-hero py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-white max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Contact Us
               </h1>
-              <p className="text-lg md:text-xl mb-8 text-white/90">
+              <p className="text-lg md:text-xl mb-8 text-white/95 leading-relaxed">
                 Ready to transform your project with BIM? Get in touch with our experts 
                 for a free consultation and see how we can help you achieve your goals.
               </p>
@@ -236,7 +236,7 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold mb-6" style={{ color: 'black' }}>Get in Touch</h2>
+                  <h2 className="text-2xl font-bold mb-6 text-foreground">Get in Touch</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {contactInfo.map((info, index) => (
                       <Card key={index}>

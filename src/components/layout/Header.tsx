@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="transition-all duration-300 hover:scale-105 group">
-            <img src={bimfordLogo} alt="BIMFord" className="h-8 md:h-10 w-auto" />
+            <img src={bimfordLogo} alt="BIMFord" className="h-6 md:h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ const Header = () => {
                 }`}
               >
                 {item.name}
-                <span className={`absolute -bottom-3 left-0 h-1 bg-primary rounded-full transition-all duration-300 ${
+                <span className={`absolute -bottom-3 left-0 h-0.5 bg-primary rounded-full transition-all duration-300 ${
                   isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></span>
               </Link>
@@ -66,24 +66,24 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-primary/20 bg-background/95 backdrop-blur-xl rounded-b-3xl">
-            <div className="px-6 pt-6 pb-8 space-y-3">
+          <div className="md:hidden fixed inset-0 top-20 bg-background/98 backdrop-blur-2xl z-40 animate-fade-in">
+            <div className="h-full flex flex-col justify-center items-center space-y-8 px-6">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-6 py-4 rounded-2xl text-lg font-bold transition-all duration-200 ${
+                  className={`text-3xl font-semibold transition-all duration-300 ${
                     isActive(item.href)
-                      ? 'text-primary bg-primary/10'
-                      : 'text-foreground hover:text-primary hover:bg-primary/5'
+                      ? 'text-primary scale-110'
+                      : 'text-foreground hover:text-primary hover:scale-105'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="px-6 pt-6">
-                <Button variant="default" size="default" asChild className="w-full">
+              <div className="pt-8">
+                <Button variant="cta" size="lg" asChild>
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                     Get Started
                   </Link>

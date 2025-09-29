@@ -14,7 +14,7 @@ const Index = () => {
       <Header />
       <main className="pt-28">
         <Hero />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-16 px-4 sm:px-6 lg:px-8">
           <TrustIndicators />
           <HighlightsSection />
           <About />
