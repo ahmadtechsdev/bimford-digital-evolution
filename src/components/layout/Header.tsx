@@ -58,44 +58,52 @@ const Header = () => {
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
-                <button className="text-foreground hover:text-primary focus:outline-none transition-all duration-200 p-3 rounded-2xl hover:bg-primary/10">
+                <Button 
+                  variant="ghost" 
+                  size="icon"
+                  className="text-foreground hover:text-primary hover:bg-primary/10"
+                >
                   <Menu className="h-6 w-6" />
-                </button>
+                </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-80 p-0 border-0">
-                <div className="flex flex-col h-full bg-card rounded-r-3xl shadow-2xl">
+              <SheetContent side="left" className="w-[280px] p-0 border-0 bg-background">
+                <div className="flex flex-col h-full">
                   {/* Logo Section */}
-                  <div className="p-6 border-b border-border/50">
-                    <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3">
-                      <img src={bimfordLogo} alt="BIMFord" className="h-8 w-auto" />
+                  <div className="p-6 border-b border-border">
+                    <Link 
+                      to="/" 
+                      onClick={() => setIsMenuOpen(false)} 
+                      className="flex items-center"
+                    >
+                      <img src={bimfordLogo} alt="BIMFord" className="h-7 w-auto" />
                     </Link>
                   </div>
 
                   {/* Navigation Items */}
-                  <nav className="flex-1 p-4 space-y-2">
+                  <nav className="flex-1 p-4 space-y-1">
                     {navigation.map((item) => {
                       const Icon = item.icon;
                       return (
                         <Link
                           key={item.name}
                           to={item.href}
-                          className={`flex items-center space-x-4 px-4 py-3 rounded-xl transition-all duration-200 ${
+                          className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
                             isActive(item.href)
-                              ? 'bg-primary/10 text-primary font-medium shadow-sm'
+                              ? 'bg-primary/10 text-primary font-semibold'
                               : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                           }`}
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <Icon className="h-5 w-5" />
-                          <span className="text-base">{item.name}</span>
+                          <Icon className="h-5 w-5 flex-shrink-0" />
+                          <span className="text-sm">{item.name}</span>
                         </Link>
                       );
                     })}
                   </nav>
 
                   {/* Bottom CTA Section */}
-                  <div className="p-6 border-t border-border/50 space-y-3">
-                    <Button variant="default" size="lg" className="w-full" asChild>
+                  <div className="p-4 border-t border-border">
+                    <Button variant="default" size="default" className="w-full" asChild>
                       <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                         Get Started
                       </Link>
