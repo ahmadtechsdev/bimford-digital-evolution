@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, Home, Briefcase, Info, Mail } from "lucide-react";
 import bimfordLogo from "@/assets/bimford-logo-colored.svg";
 
 const Header = () => {
@@ -9,10 +10,10 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/", icon: Home },
+    { name: "Services", href: "/services", icon: Briefcase },
+    { name: "About", href: "/about", icon: Info },
+    { name: "Contact", href: "/contact", icon: Mail },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -55,53 +56,57 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-foreground hover:text-primary focus:outline-none transition-all duration-200 p-3 rounded-2xl hover:bg-primary/10"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <button className="text-foreground hover:text-primary focus:outline-none transition-all duration-200 p-3 rounded-2xl hover:bg-primary/10">
+                  <Menu className="h-6 w-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-80 p-0 border-0">
+                <div className="flex flex-col h-full bg-card rounded-r-3xl shadow-2xl">
+                  {/* Logo Section */}
+                  <div className="p-6 border-b border-border/50">
+                    <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3">
+                      <img src={bimfordLogo} alt="BIMFord" className="h-8 w-auto" />
+                    </Link>
+                  </div>
+
+                  {/* Navigation Items */}
+                  <nav className="flex-1 p-4 space-y-2">
+                    {navigation.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className={`flex items-center space-x-4 px-4 py-3 rounded-xl transition-all duration-200 ${
+                            isActive(item.href)
+                              ? 'bg-primary/10 text-primary font-medium shadow-sm'
+                              : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          <Icon className="h-5 w-5" />
+                          <span className="text-base">{item.name}</span>
+                        </Link>
+                      );
+                    })}
+                  </nav>
+
+                  {/* Bottom CTA Section */}
+                  <div className="p-6 border-t border-border/50 space-y-3">
+                    <Button variant="default" size="lg" className="w-full" asChild>
+                      <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                        Get Started
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-[108px] bg-muted/95 backdrop-blur-xl z-30 animate-fade-in overflow-y-auto">
-            <div className="h-full flex flex-col pt-8 pb-8 px-6">
-              {/* Navigation Items */}
-              <div className="flex-1 space-y-3">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`block w-full p-4 rounded-2xl text-lg font-medium transition-all duration-300 ${
-                      isActive(item.href)
-                        ? 'bg-primary text-primary-foreground shadow-md'
-                        : 'bg-card text-foreground hover:bg-primary/10 hover:shadow-sm'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-              
-              {/* Action Buttons */}
-              <div className="space-y-3 mt-6">
-                <Button variant="outline" size="lg" className="w-full" asChild>
-                  <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-                    Our Services
-                  </Link>
-                </Button>
-                <Button variant="cta" size="lg" className="w-full" asChild>
-                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );
