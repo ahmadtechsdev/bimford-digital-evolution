@@ -106,7 +106,7 @@ const Contact = () => {
       <TopBanner />
       <Header />
       
-      <main className="pt-28">
+      <main className="pt-32">
         {/* Hero Section */}
         <section className="bg-gradient-hero py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,7 +114,7 @@ const Contact = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Contact Us
               </h1>
-              <p className="text-lg md:text-xl mb-8 text-white/95 leading-relaxed">
+              <p className="text-lg md:text-xl mb-8 text-white leading-relaxed">
                 Ready to transform your project with BIM? Get in touch with our experts 
                 for a free consultation and see how we can help you achieve your goals.
               </p>

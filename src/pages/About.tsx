@@ -110,7 +110,7 @@ const About = () => {
       <TopBanner />
       <Header />
       
-      <main className="pt-28">
+      <main className="pt-32">
         {/* Hero Section */}
         <section className="bg-gradient-hero py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,7 +118,7 @@ const About = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 About BIMFord
               </h1>
-              <p className="text-lg md:text-xl mb-8 text-white/95 leading-relaxed">
+              <p className="text-lg md:text-xl mb-8 text-white leading-relaxed">
                 We are more than BIM consultants — we are digital transformation partners 
                 for the Architecture, Engineering, Construction, and Operations (AECO) industry.
               </p>

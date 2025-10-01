@@ -18,7 +18,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 w-full bg-background/90 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg">
+    <header className="fixed top-[44px] w-full bg-background/90 backdrop-blur-xl border-b border-primary/10 z-40 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -66,24 +66,34 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-20 bg-background/98 backdrop-blur-2xl z-40 animate-fade-in">
-            <div className="h-full flex flex-col justify-center items-center space-y-8 px-6">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`text-3xl font-semibold transition-all duration-300 ${
-                    isActive(item.href)
-                      ? 'text-primary scale-110'
-                      : 'text-foreground hover:text-primary hover:scale-105'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="pt-8">
-                <Button variant="cta" size="lg" asChild>
+          <div className="md:hidden fixed inset-0 top-[108px] bg-muted/95 backdrop-blur-xl z-30 animate-fade-in overflow-y-auto">
+            <div className="h-full flex flex-col pt-8 pb-8 px-6">
+              {/* Navigation Items */}
+              <div className="flex-1 space-y-3">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block w-full p-4 rounded-2xl text-lg font-medium transition-all duration-300 ${
+                      isActive(item.href)
+                        ? 'bg-primary text-primary-foreground shadow-md'
+                        : 'bg-card text-foreground hover:bg-primary/10 hover:shadow-sm'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+              
+              {/* Action Buttons */}
+              <div className="space-y-3 mt-6">
+                <Button variant="outline" size="lg" className="w-full" asChild>
+                  <Link to="/services" onClick={() => setIsMenuOpen(false)}>
+                    Our Services
+                  </Link>
+                </Button>
+                <Button variant="cta" size="lg" className="w-full" asChild>
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                     Get Started
                   </Link>

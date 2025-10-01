@@ -9,7 +9,7 @@ const TopBanner = () => {
   ];
 
   return (
-    <div className="bg-primary text-primary-foreground py-2 text-sm">
+    <div className="fixed top-0 w-full bg-primary text-primary-foreground py-2 text-sm z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
           {/* Contact Info */}
