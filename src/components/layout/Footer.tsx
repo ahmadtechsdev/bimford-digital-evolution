@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import bimfordLogo from "@/assets/bimford-logo-colored.svg";
+import bimfordLogo from "@/assets/bimford-logo.png";
 
 const Footer = () => {
   return (

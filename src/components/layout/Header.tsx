@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Home, Briefcase, Info, Mail } from "lucide-react";
-import bimfordLogo from "@/assets/bimford-logo-colored.svg";
+import bimfordLogo from "@/assets/bimford-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
