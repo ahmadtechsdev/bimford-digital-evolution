@@ -126,7 +126,7 @@ const About = () => {
           
           <div className="text-center">
             <Button variant="cta" size="lg" asChild>
-              <Link to="/contact">Start Your Digital Transformation</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
