@@ -21,9 +21,11 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import bimModelingImage from "@/assets/bim-modeling.jpg";
+import coordinationImage from "@/assets/coordination.jpg";
+import designManagementImage from "@/assets/design-management.jpg";
 import digitalTwinImage from "@/assets/digital-twin.jpg";
 import consultingImage from "@/assets/consulting.jpg";
-import designManagementImage from "@/assets/design-management.jpg";
+import operationsImage from "@/assets/operations.jpg";
 
 const Services = () => {
   const [activeService, setActiveService] = useState("modeling");
@@ -54,7 +56,7 @@ const Services = () => {
       title: "BIM Coordination & Clash Detection",
       subtitle: "Seamless Integration Across Disciplines",
       description: "Poor coordination is the #1 cause of project delays and cost overruns. BIMFord ensures seamless integration across architectural, structural, and MEP disciplines — detecting and resolving clashes virtually before construction begins.",
-      image: bimModelingImage,
+      image: coordinationImage,
       features: [
         "Federated model creation in a Common Data Environment (CDE)",
         "Automated clash detection using Navisworks, Solibri, and BIM360",
@@ -132,7 +134,7 @@ const Services = () => {
       title: "Lifecycle & Operations Support",
       subtitle: "Long-term Asset Value",
       description: "Your BIM model is more than a design tool — it's a long-term asset. We help owners and operators leverage BIM for efficient operations, maintenance, and facility management.",
-      image: consultingImage,
+      image: operationsImage,
       services: [
         "As-built model creation and handover",
         "7D integration with Facility Management (FM) systems",
