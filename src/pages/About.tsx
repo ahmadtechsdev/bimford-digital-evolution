@@ -99,7 +99,7 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Delivered", icon: Building },
+    { number: "100+", label: "Projects Delivered", icon: Building },
     { number: "20+", label: "Countries Served", icon: Globe },
     { number: "50+", label: "Expert Team Members", icon: Users },
     { number: "30%", label: "Average Cost Savings", icon: TrendingUp }

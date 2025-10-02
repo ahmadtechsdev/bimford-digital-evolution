@@ -5,13 +5,13 @@ const TrustIndicators = () => {
   const indicators = [
     {
       icon: Building2,
-      title: "500+",
+      title: "100+",
       description: "Projects Delivered",
       subtitle: "Across multiple industries"
     },
     {
       icon: Users,
-      title: "200+",
+      title: "50+",
       description: "Global Clients",
       subtitle: "Trusted partnerships"
     },
