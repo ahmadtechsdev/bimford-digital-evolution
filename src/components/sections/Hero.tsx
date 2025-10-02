@@ -25,7 +25,7 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="mb-12 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight tracking-tight">
-              <span className="gradient-text animate-fade-in">Building Smarter Managing Better</span>
+              <span className="gradient-text animate-fade-in">Smart Project. Intelligent Management</span>
             </h1>
           </div>
           
